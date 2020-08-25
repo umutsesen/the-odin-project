@@ -59,7 +59,6 @@ function clicked () {
     let pages = document.getElementById('pages').value;
     let read = "You still have not read this book"
     if (document.getElementById('read').checked) read = "You have read this book"
-    // obje olustur sonra aynı sekilde objenin seylerini boyle yanıstıcaz ya da bi function döncek myArraydaki bu objeleri döne döne div olusturcak. bilgiler.e
     let NewBook = new Book(title, author, pages, read)
     addBookToLibrary(NewBook)
     document.getElementById('title').value = ""
