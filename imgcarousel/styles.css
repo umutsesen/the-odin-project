@@ -1,0 +1,70 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}​
+
+
+body {
+    background: gray;
+}
+
+.mySlides {
+    display: none;
+}
+
+.carousel {
+ 
+    height: 900px;
+    overflow: hidden;
+    margin: auto;
+    display: flex;
+    white-space: nowrap;
+    
+    
+}
+
+
+#img {
+    display: inline-flex;
+    border: 1px solid black;
+    width: 1000px;
+    height: 900px;
+
+
+    
+   
+    
+
+}
+img {
+    
+    width: 1000px;
+    height: 900px;
+    position: absolute;
+   
+}
+
+.next {
+    
+    animation: nextslide 2s ease-in-out forwards;
+   
+}
+.previous {
+    
+    animation: previousslide 2s ease-in-out forwards;
+ 
+
+}
+@keyframes nextslide {
+    0% { transform: translateX(0px);}
+    100% {  transform: translateX(100%);}
+    
+    
+}
+
+@keyframes previousslide {
+    0% {  transform: translateX(-100%);}
+    100% { transform: translateX(0px);}
+    
+}
+

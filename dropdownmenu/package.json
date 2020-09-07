@@ -1,0 +1,16 @@
+{
+  "name": "navbar",
+  "version": "1.0.0",
+  "description": "nav",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.8.1",
+    "eslint-plugin-react": "^7.20.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

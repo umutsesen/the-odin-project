@@ -54,12 +54,24 @@ function ChangeReadingStatus(key) {
 function clicked () {
   if (event.target.id == 'add') document.querySelector('form').style.visibility = 'visible'
   if (event.target.id == 'addbook') {
-    let title = document.getElementById('title').value;
-    let author = document.getElementById('author').value;
-    let pages = document.getElementById('pages').value;
+    let title = document.getElementById('title');
+    let author = document.getElementById('author');
+    let pages = document.getElementById('pages');
     let read = "You still have not read this book"
     if (document.getElementById('read').checked) read = "You have read this book"
-    let NewBook = new Book(title, author, pages, read)
+    const emailError = document.querySelector('#error');
+    if(!title.validity.valid || !author.validity.valid || !pages.validity.valid) {
+      ShowError();
+      return false
+    }
+    function ShowError() {
+      if (title.validity.valueMissing || author.validity.valueMissing || pages.validity.valueMissing) {
+        emailError.textContent = 'You need to enter some letters';
+        emailError.className = 'error active';
+      
+    }
+  }
+    let NewBook = new Book(title.value, author.value, pages.value, read)
     addBookToLibrary(NewBook)
     document.getElementById('title').value = ""
     document.getElementById('author').value = ""

@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href='styles.css' type='text/css'>
 </head>
 <body>
     <button id='add' class="btn btn-primary">Add a new book</button>
@@ -10,9 +11,11 @@
     <form style='visibility: hidden;'>
         <div class="form-group">
         <div class="col-sm-3 my-1">
-        <input type='text' class="form-control" placeholder='Title' id='title'>
-        <input type='text' class="form-control" placeholder='Author' id='author'>
-        <input type='text' class="form-control" placeholder='Pages' id='pages'>
+        <input type='text' class="form-control" placeholder='Title' id='title' required minlength="1" >
+        <input type='text' class="form-control" placeholder='Author' id='author' required minlength="1" >
+        <input type='text' class="form-control" placeholder='Pages' id='pages' required minlength="1">
+        <span id="error" aria-live="polite"></span>
+        <br>
         <label class="form-check-label" for="read"> Have you read the book? </label>
         <input  type="checkbox" id="read" >
         <button type="submit" class="btn btn-primary" id='addbook'>Submit</button>
